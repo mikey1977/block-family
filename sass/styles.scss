@@ -9,6 +9,7 @@ $bright-color : orange;
 $padding : 20px;
 
 // Media Query Ranges
+$small: "only screen and (max-width:600px)";
 $medium: "only screen and (min-width:601px) and (max-width:768px)";
 $large: "only screen and (min-width:769px)";
 
@@ -25,6 +26,8 @@ body{
   background-color: $bright-color;
   text-align: center;
   color: #EEE;
+  box-sizing: border-box;
+  // display: inline-block;
 
   @media #{$large}{
     background-color: $dark-color;
@@ -64,28 +67,62 @@ h2{
 
 
 .block_family{
-  max-width:350px;
+  max-width:400px;
+  // width: auto;
   margin:auto;
+  // display: inline-block;
+  box-sizing: border-box;
 
   @media #{$medium}{
-    max-width: 600px;
+    max-width: 500px;
   }
 
   @media #{$large}{
-    max-width: 750px;
+    max-width: 600px;
   }
+}
+
+.block_family li:nth-child(2) {
+  background-color: $light-color;
+}
+
+.block_family li:nth-child(5) {
+  background-color: $light-color;
+}
+
+.block_family li:nth-child(8) {
+  background-color: $light-color;
+}
+
+.block_family li:nth-child(11) {
+  background-color: $light-color;
 }
 
 .block_family li{
   background-color: #222;
   margin-bottom: 20px;
+  display: inline-block;
+  width: 50%;
   padding: $padding;
+  box-sizing: border-box;
+
+  @media #{$small}{
+    background-color: $dark-color;
+
+  }
 
   @media #{$medium}{
   background-color: $light-color;
+  width: 40%;
+
+
+
   }
 
   @media #{$large}{
     background-color: $bright-color;
+    width: 30%;
   }
+
 }
+
